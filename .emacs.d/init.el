@@ -41,8 +41,11 @@
 (display-time-mode 1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
-(global-prettify-symbols-mode 1)
 (blink-cursor-mode 0)
+
+;; other tweaks
+(setq scroll-conservatively 100)
+(global-prettify-symbols-mode 1)
 
 ;; gruvbox
 
@@ -54,6 +57,7 @@
 ;; curosr
 (setq-default cursor-type 'bar)
 (set-cursor-color "#fff000")
+(global-hl-line-mode t)
 
 ;;
 ;; elfeed
@@ -143,7 +147,5 @@
   (progn
     (message "Linux")
     ;;(set-frame-font "Iosevka-15" nil t)
-    ;;(set-frame-font "Terminus (ttf) Medium 15" nil t) 
-    ;;(set-face-attribute 'default nil :height 150) ; emacs is so tiny
-    ;;in mac
     )))
+
