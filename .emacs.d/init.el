@@ -43,14 +43,17 @@
 (toggle-scroll-bar -1)
 (global-prettify-symbols-mode 1)
 (blink-cursor-mode 0)
-(setq-default cursor-type 'bar)
 
 ;; gruvbox
 
 (use-package gruvbox-theme
   :ensure t)
 (load-theme 'gruvbox-dark-hard)
-;;(load-theme 'gruvbox-dark-hard)
+;;(load-theme 'gruvbox-light-hard)
+
+;; curosr
+(setq-default cursor-type 'bar)
+(set-cursor-color "#fff000")
 
 ;;
 ;; elfeed
@@ -140,8 +143,7 @@
   (progn
     (message "Linux")
     ;;(set-frame-font "Iosevka-15" nil t)
-    ;;(set-frame-font "Terminus (ttf) Medium 15" nil t) ; gay font
+    ;;(set-frame-font "Terminus (ttf) Medium 15" nil t) 
     ;;(set-face-attribute 'default nil :height 150) ; emacs is so tiny
     ;;in mac
-    ;; fonts are gay and don't work under daemon mode anyway.
     )))
