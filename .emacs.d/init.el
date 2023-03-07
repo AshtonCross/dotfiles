@@ -18,24 +18,6 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;;
-;; version specific settings
-;;
-
-(cond
- ((string-equal system-type "windows-nt")
-  (progn
-    (message "Microsoft Windows"))
-  (set-face-attribute 'default nil :height 120)) ; emacs is small in win
- ((string-equal system-type "darwin") ; macosx
-  (progn
-    (message "Mac OS X"))
-  (setq mac-command-modifier 'control)
-  (set-face-attribute 'default nil :height 150)) ; emacs is so tiny in mac
- ((string-equal system-type "gnu/linux")
-  (progn
-    (message "Linux"))))
-
 ;; general settings
 
 ;; dired conf
@@ -61,12 +43,13 @@
 (toggle-scroll-bar -1)
 (global-prettify-symbols-mode 1)
 (blink-cursor-mode 0)
+(setq-default cursor-type 'bar)
 
 ;; gruvbox
 
 (use-package gruvbox-theme
   :ensure t)
-(load-theme 'gruvbox-light-hard)
+(load-theme 'gruvbox-dark-hard)
 ;;(load-theme 'gruvbox-dark-hard)
 
 ;;
@@ -88,12 +71,10 @@
 	;; feeds go in here
 	;; format:
 	;; ("https://path.to/feed.xml" tag1 tag2 tag3 etc)
-	("http://www.xahlee.info/comp/blog.xml" programming tech)
-	("http://rss.slashdot.org/Slashdot/slashdotMain" programming tech news linux)
-	("http://www.xahlee.info/emacs/emacs/blog.xml" emacs tech)
-	("http://www.xahlee.info/kbd/keyboard_blog.xml" keyboard tech)
-	("https://planet.emacslife.com/atom.xml" emacs tech)
-	("https://lukesmith.xyz/lindy.xml" reading store)
+	("https://lukesmith.xyz/lindy.xml" reading store philosophy)
+	("https://denshi.org/index.xml" computers)
+	("https://lukesmith.xyz/index.xml" computers philosophy)
+	("https://notrelated.xyz/rss" philosophy podcast)
 	))
 
 ;;
@@ -141,5 +122,26 @@
 ;; (use-package ergoemacs-mode :ensure t) ; ergo-macs
 ;; (use-package xah-fly-keys :ensure t) ; xah fly keys (only for genuises with 9k iq)
 
+;;
+;; version specific settings (adjustments to font and window size)
+;;
 
-
+(cond
+ ((string-equal system-type "windows-nt")
+  (progn
+    (message "Microsoft Windows"))
+  (set-face-attribute 'default nil :height 120)) ; emacs is small in win
+ ((string-equal system-type "darwin") ; macosx
+  (progn
+    (message "Mac OS X"))
+  (setq mac-command-modifier 'control)
+  (set-face-attribute 'default nil :height 150)) ; emacs is so tiny in mac
+ ((string-equal system-type "gnu/linux")
+  (progn
+    (message "Linux")
+    ;;(set-frame-font "Iosevka-15" nil t)
+    ;;(set-frame-font "Terminus (ttf) Medium 15" nil t) ; gay font
+    ;;(set-face-attribute 'default nil :height 150) ; emacs is so tiny
+    ;;in mac
+    ;; fonts are gay and don't work under daemon mode anyway.
+    )))
