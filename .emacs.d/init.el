@@ -54,6 +54,13 @@
 (load-theme 'gruvbox-dark-hard)
 ;;(load-theme 'gruvbox-light-hard)
 
+(use-package almost-mono-themes
+  :ensure t)
+(load-theme 'almost-mono-gray)
+
+;; for some reason, loading both of these themes creats a really cool
+;; theme
+
 ;; curosr
 (setq-default cursor-type 'bar)
 (set-cursor-color "#fff000")
