@@ -62,7 +62,7 @@
 ;; theme
 
 ;; curosr
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)
 (set-cursor-color "#fff000")
 (global-hl-line-mode t)
 
