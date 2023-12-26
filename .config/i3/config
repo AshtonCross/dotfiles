@@ -203,7 +203,8 @@ bar {
 }
 
 
-
+# if not already initiated by some other process
+# exec_always emacs --daemon 
 exec_always xrandr --output DP-3 --mode 1920x1080 --rate 240
 exec_always compton
 exec_always feh --bg-scale /home/aic/Pictures/Wallpapers/wallpaper.* # do not use file name "wallpaper for any other file". makes it slightly more portable.
@@ -216,3 +217,6 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
+
+
+bindsym $mod+o exec emacsclient -c
