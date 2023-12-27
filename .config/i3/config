@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -203,12 +203,11 @@ bar {
 }
 
 
-# if not already initiated by some other process
-# exec_always emacs --daemon 
+# if not already initiated by some other process 
 exec_always xrandr --output DP-3 --mode 1920x1080 --rate 240
-exec_always compton
 exec_always feh --bg-scale /home/aic/Pictures/Wallpapers/wallpaper.* # do not use file name "wallpaper for any other file". makes it slightly more portable.
-	    		   					     # can just drop whatever you want in that folder with that name (.png, .jpeg, etc)
+
+# can just drop whatever you want in that folder with that name (.png, .jpeg, etc)
 # class                 border  backgr. text    indicator child_border
 client.focused          #8BC34A #689F38 #ffffff #66BB6A   #1B5E20
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
@@ -218,5 +217,9 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-
+exec_always picom 
 bindsym $mod+o exec emacsclient -c
+bindsym $mod+Print exec xfce4-screenshooter
+# exec_always emacs --daemon # TODO: find out where i can put this better
+
+gaps inner 5

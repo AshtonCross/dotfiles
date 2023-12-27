@@ -22,8 +22,8 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; mostly just for i3. not very good looking outside of tiling wm's
-;; (set-frame-parameter nil 'alpha-background 95)
-;; (add-to-list 'default-frame-alist '(alpha-background . 95))
+(set-frame-parameter nil 'alpha-background 85)
+(add-to-list 'default-frame-alist '(alpha-background . 85))
 
 ;; move annoying *~ files to better location.
 (setq make-backup-files nil)
@@ -70,6 +70,7 @@
 (toggle-scroll-bar -1)
 (blink-cursor-mode 0)
 (menu-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; other tweaks
 (setq scroll-conservatively 100)
