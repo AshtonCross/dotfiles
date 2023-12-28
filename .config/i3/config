@@ -204,7 +204,8 @@ bar {
 
 
 # if not already initiated by some other process 
-exec_always xrandr --output DP-3 --mode 1920x1080 --rate 240
+# execute any xrandr settings. System specific
+exec_always sh ~/.xprofile
 exec_always feh --bg-scale /home/aic/Pictures/Wallpapers/wallpaper.* # do not use file name "wallpaper for any other file". makes it slightly more portable.
 
 # can just drop whatever you want in that folder with that name (.png, .jpeg, etc)

@@ -1,9 +1,3 @@
-/home/aic/src/dotfiles/install_dotfiles.sh
-/home/aic/src/dotfiles/#install_dotfiles.sh#
-/home/aic/src/dotfiles/update_repository.sh
-/home/aic/src/dotfiles/#update_repository.sh#
-/home/aic/.emacs.d/init.el
-/home/aic/.emacs.d/#init.el#
 /home/aic/.config/i3/config
 /home/aic/.config/i3/#config#
 /home/aic/src/dotfiles/install_required_programs.sh
