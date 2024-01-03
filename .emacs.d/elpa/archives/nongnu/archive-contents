@@ -2001,14 +2001,15 @@
 	      ("Chen Bin" . "chenbin.sh@gmail.com"))
 	     (:commit . "4e71f5b9199a0ad10017104a6b2bf5ef5f207dfc"))])
  (slime .
-	[(2 26 1)
+	[(2 28)
 	 ((cl-lib
 	   (0 5))
 	  (macrostep
 	   (0 9)))
 	 "Superior Lisp Interaction Mode for Emacs" tar
 	 ((:url . "https://github.com/slime/slime")
-	  (:keywords "languages" "lisp" "slime"))])
+	  (:keywords "languages" "lisp" "slime")
+	  (:commit . "28adf1dca0eea36d113d942bbf050fa92150981d"))])
  (sly .
       [(1 0 43)
        ((emacs
@@ -2097,7 +2098,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:commit . "e73c0a38039eb32fd43911023ff35007e324c733"))])
  (sweeprolog .
-	     [(0 27 2)
+	     [(0 27 3)
 	      ((emacs
 		(27 1))
 	       (compat
@@ -2108,7 +2109,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "e98cf4feb6dab3b01b650b95830ea57b176613e4"))])
+	       (:commit . "52f506b3a3dd7e7003a44ad3ae5257b3d22025d2"))])
  (swift-mode .
 	     [(9 1 0)
 	      ((emacs
@@ -2417,14 +2418,14 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(24 19 20231212124900)
+	       [(24 19 20240101152046)
 		((emacs
 		  (27)))
 		"ergonomic modal keybinding minor mode." tar
 		((:url . "http://xahlee.info/emacs/misc/xah-fly-keys.html")
 		 (:keywords "convenience" "vi" "vim" "ergoemacs" "keybinding")
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
-		 (:commit . "d2f2608a9e283ca45053258086662a1bdd42be65"))])
+		 (:commit . "d74760a2553f2b2275495ae99659451156639deb"))])
  (xkcd .
        [(1 1)
 	((json

@@ -222,5 +222,5 @@ exec_always picom
 bindsym $mod+o exec emacsclient -c
 bindsym $mod+Print exec xfce4-screenshooter
 # exec_always emacs --daemon # TODO: find out where i can put this better
-
+bindsym $mod+p exec i3lock
 gaps inner 5
